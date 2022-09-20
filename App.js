@@ -16,11 +16,10 @@ export default function App() {
   const [rates, setRates] = useState({});
   const [selected, setSelected] = useState("");
   const [amount, setAmount] = useState("");
-  const [eur, setEur] = useState("");
+  const [eur, setEurot] = useState("");
 
   const getCurrencyData = () => {
     setRates(sampleData.rates);
-    console.warn("Huomio, sample dataa");
   };
 
   useEffect(() => {
@@ -29,7 +28,7 @@ export default function App() {
 
   const convert = () => {
     const amountEur = Number(amount) / rates[selected];
-    setEur(amountEur.toFixed(2) + " €");
+    setEurot(amountEur.toFixed(2) + " €");
   };
 
   return (
