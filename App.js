@@ -50,8 +50,7 @@ export default function App() {
         <Picker
           style={styles.Picker}
           selectedValue={selected}
-          onValueChange={(itemValue, itemIndex) => {
-            console.log(itemValue, itemIndex);
+          onValueChange={(itemValue) => {
             setSelected(itemValue);
           }}
         >
